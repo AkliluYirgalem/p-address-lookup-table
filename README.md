@@ -1,2 +1,2 @@
-# p-address-lookup-table-program
+# p-address-lookup-table
 pinocchio based Address Lookup Table Program
