@@ -30,13 +30,13 @@ A re-implementation of the native [Address Lookup Table program](https://github.
 
 ## Compute Units
 
-| Instruction             | Completed | CU (`p-address-lookup-table`) | CU (`native-address-lookup-table`) |
-| ----------------------- | --------- | ----------------------------- | ---------------------------------- |
-| `CreateLookupTable`     | ✅        | 3368                          | 10459                              |
-| `FreezeLookupTable`     | ✅        | 207                           | 1762                               |
-| `ExtendLookupTable`     | ✅        | 1986                          | 6331                               |
-| `DeactivateLookupTable` | ✅        | 364                           | 2873                               |
-| `CloseLookupTable`      | ✅        | 639                           | 2890                               |
+| Instruction             | CU (`p-address-lookup-table`) | CU (`native-address-lookup-table`) |
+| ----------------------- | ----------------------------- | -----------------------------------|
+| `CreateLookupTable`     | 3368                          | 10459                              |
+| `FreezeLookupTable`     | 207                           | 1762                               |
+| `ExtendLookupTable`     | 1986                          | 6331                               |
+| `DeactivateLookupTable` | 364                           | 2873                               |
+| `CloseLookupTable`      | 639                           | 2890                               |
 
 ## Building
 
