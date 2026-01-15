@@ -82,7 +82,7 @@ fn test_1_create_lookup_table() {
     let context = mollusk.with_context(accounts.accounts.clone());
     let result = context.process_and_validate_instruction(&create_instruction, &[Check::success()]);
 
-    // preserve the state of the created_table_account
+    // Preserve the state of the created_table_account
     accounts.store_account(
         lookup_table,
         result.get_account(&lookup_table).unwrap().clone(),
@@ -161,7 +161,7 @@ fn test_3_freeze_lookup_table() {
 
     context.process_and_validate_instruction(&freeze_instruction, &[Check::success()]);
 
-    //here we aren't passing the state of the table, its intentional, because we cant deactivate frozen account
+    // here we aren't passing the state of the table, its intentional, because we cant deactivate frozen account
 }
 
 #[test]
@@ -215,7 +215,7 @@ fn test_5_close_lookup_table() {
     accounts.store_account(recipient, Account::default());
 
     let mut tweaked_meta = accounts.get_account(&lookup_table).unwrap();
-    tweaked_meta.data[4] = 42; //tweaking the deactivation slot so it wont be found in the recent slots
+    tweaked_meta.data[4] = 42; // Tweaking the deactivation slot so it wont be found in the recent slots
     accounts.store_account(lookup_table, tweaked_meta);
 
     let close_descriminator: u32 = 4;

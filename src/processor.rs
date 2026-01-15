@@ -82,7 +82,7 @@ pub fn process_create_lookup_table(
         Seed::from(&slot_bytes),
         Seed::from(&bump_ref),
     ];
-    //combined into one CPI, rather than the three CPI, will save cu
+    // Combined into one CPI, rather than the three CPI, will save cu
     instructions::CreateAccount {
         from: payer_info,
         to: lookup_table_info,
@@ -342,7 +342,7 @@ pub fn process_close_lookup_table(program_id: &Pubkey, accounts: &[AccountInfo])
         let clock = <Clock as Sysvar>::get()?;
         let current_slot = clock.slot;
 
-        //want to avoid function call, they call a function in the reference
+        // Want to avoid function call, they call a function in the reference
 
         if meta.deactivation_slot == Slot::MAX {
             log!("Lookup table is not deactivated");
